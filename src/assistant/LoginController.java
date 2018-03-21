@@ -1,4 +1,4 @@
-package exam.assistant;
+package assistant;
 
 import java.net.URL;
 import java.util.ResourceBundle;

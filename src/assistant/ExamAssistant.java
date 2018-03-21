@@ -1,4 +1,4 @@
-package exam.assistant;
+package assistant;
 
 import java.io.IOException;
 import javafx.application.Application;
