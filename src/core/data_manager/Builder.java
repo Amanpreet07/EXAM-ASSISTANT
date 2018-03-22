@@ -5,7 +5,7 @@ package core.data_manager;
 import java.io.File;
 import java.io.IOException;
 
-public class Manager {
+public class Builder {
     
     public String rootPath = System.getProperty("user.home") + "\\ExamAssistant";
     
@@ -38,11 +38,11 @@ public class Manager {
         folderList[6]+"\\courses.exm",   // 10
         folderList[6]+"\\subjects.exm",
         folderList[6]+"\\faculty.exm",
-        folderList[8]+"\\logs.exm",      // 13
-        folderList[9]+"\\paths.exm",
+        folderList[9]+"\\paths.exm",     // 13
         folderList[9]+"\\file_list.exm",
-        folderList[9]+"\\recent.exm",    // 16
-        folderList[9]+"\\users.exm",
+        folderList[9]+"\\recent.exm",    
+        folderList[9]+"\\users.exm",     // 16
+        folderList[9]+"\\integrity.exm",
         folderList[10]+"\\session.exm",
         folderList[11]+"\\license.txt",  // 19
         folderList[11]+"\\contact.txt",
@@ -72,7 +72,7 @@ public class Manager {
         return status;
     }
     
-    // method to verify the core files
+    // method to verify the core files and their last known size
     public static int checkIntegrity(){
         int status = 1; // 0 is error, 1 is good
         

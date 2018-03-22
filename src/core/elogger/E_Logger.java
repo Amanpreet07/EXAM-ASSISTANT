@@ -1,6 +1,6 @@
-package core.logger;
+package core.elogger;
 
 // Purpose: To handle all the logs RW
-public class Logger {
+public class E_Logger {
     
 }
