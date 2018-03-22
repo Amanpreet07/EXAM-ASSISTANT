@@ -1,11 +1,21 @@
 package core.extras;
 // Purpose: To manage backups
-public class Backup {
+
+import java.io.Serializable;
+
+public class Backup implements Serializable{
     
     private String title;
     private String doc;
     private String location;
     private String size;
+
+    public Backup(String title, String doc, String location, String size) {
+        this.title = title;
+        this.doc = doc;
+        this.location = location;
+        this.size = size;
+    }
 
     public String getTitle() {
         return title;

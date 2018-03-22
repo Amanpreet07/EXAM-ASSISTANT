@@ -1,6 +1,9 @@
 package core.institute;
 // Purpose: To manage the institute's profile
-public class Institution {
+
+import java.io.Serializable;
+
+public class Institution implements Serializable{
     
     private String name;
     private String location;
@@ -11,6 +14,18 @@ public class Institution {
     private String email;
     private String linkedIn; // optional field
     private String twitter;  // optional field
+
+    public Institution(String name, String location, int type, String admin_name, String website, String contact, String email, String linkedIn, String twitter) {
+        this.name = name;
+        this.location = location;
+        this.type = type;
+        this.admin_name = admin_name;
+        this.website = website;
+        this.contact = contact;
+        this.email = email;
+        this.linkedIn = linkedIn;
+        this.twitter = twitter;
+    }
 
     public String getName() {
         return name;

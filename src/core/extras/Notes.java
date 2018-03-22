@@ -1,12 +1,22 @@
 package core.extras;
 // Purpose: To manage NOTES for the ADMIN
-public class Notes {
-    
+
+import java.io.Serializable;
+
+public class Notes implements Serializable{
+   
     private String title;
     private String data;
     private String doc; // date of creation
     private boolean status; // active/deleted
 
+    public Notes(String title, String data, String doc, boolean status) {
+        this.title = title;
+        this.data = data;
+        this.doc = doc;
+        this.status = status;
+    }
+    
     public String getTitle() {
         return title;
     }

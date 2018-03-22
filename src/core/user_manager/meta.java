@@ -1,6 +1,9 @@
 package core.user_manager;
 // Purpose: to manage the admin credentials.
-public class meta {
+
+import java.io.Serializable;
+
+public class meta implements Serializable{
     
     private String username;
     private String password;
@@ -29,6 +32,14 @@ public class meta {
     "what is your favorite online platform?",
     "what is your favorite social media website?"
     };
+
+    public meta(String username, String password, String securityAnswer, String securityQuestion, String email) {
+        this.username = username;
+        this.password = password;
+        this.securityAnswer = securityAnswer;
+        this.securityQuestion = securityQuestion;
+        this.email = email;
+    }
 
     public String[] getQues() {
         return ques;
@@ -74,7 +85,5 @@ public class meta {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
-    
+     
 }

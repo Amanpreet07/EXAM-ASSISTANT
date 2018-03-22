@@ -1,6 +1,9 @@
 package core.user_manager;
 // Purpose : To hold data about ADMIN
-public class Admin {
+
+import java.io.Serializable;
+
+public class Admin implements Serializable{
  
     private String name;
     private String gender;
@@ -17,9 +20,24 @@ public class Admin {
     private String linkedIn; // optional field
     private boolean routine; // for backup routine during shutdown
 
-    Admin(){ // constructor
-        
+    public Admin(String name, String gender, int age, String doc, String institution, String i_id, String position, String itype, String avatar, String contact, String email, String twitter, String linkedIn, boolean routine) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.doc = doc;
+        this.institution = institution;
+        this.i_id = i_id;
+        this.position = position;
+        this.itype = itype;
+        this.avatar = avatar;
+        this.contact = contact;
+        this.email = email;
+        this.twitter = twitter;
+        this.linkedIn = linkedIn;
+        this.routine = routine;
     }
+
+    
 
     public String getName() {
         return name;

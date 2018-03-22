@@ -43,9 +43,8 @@ public class Builder {
         folderList[9]+"\\recent.exm",    
         folderList[9]+"\\users.exm",     // 16
         folderList[9]+"\\integrity.exm",
-        folderList[10]+"\\session.exm",
-        folderList[11]+"\\license.txt",  // 19
-        folderList[11]+"\\contact.txt",
+        folderList[11]+"\\license.txt",  
+        folderList[11]+"\\contact.txt",  // 19
         folderList[11]+"\\help.html"     
         };
     

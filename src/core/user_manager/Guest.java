@@ -1,11 +1,21 @@
 package core.user_manager;
 // Purpose: To hold data about GUEST
-public class Guest {
+
+import java.io.Serializable;
+
+public class Guest implements Serializable{
     
     private String name;
     private String gender;
     private String i_id;
     private String contact; // optional field
+
+    public Guest(String name, String gender, String i_id, String contact) {
+        this.name = name;
+        this.gender = gender;
+        this.i_id = i_id;
+        this.contact = contact;
+    }
 
     public String getName() {
         return name;
