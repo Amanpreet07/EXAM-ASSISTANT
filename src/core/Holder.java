@@ -1,10 +1,19 @@
 package core;
 // Purpose: to hold intermidiate values during background processing.
-// singleton class to store values
+// singleton class to store values and current session type.
 public class Holder {
     
     private String one;
     private String two;
+    private String session;
+
+    public String getSession() {
+        return session;
+    }
+
+    public void setSession(String session) {
+        this.session = session;
+    }
 
     public String getTwo() {
         return two;
