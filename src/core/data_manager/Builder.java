@@ -35,16 +35,13 @@ public class Builder {
         folderList[6]+"\\questions.exm", // 7
         folderList[6]+"\\papers.exm",
         folderList[6]+"\\banks.exm",
-        folderList[6]+"\\courses.exm",   // 10
-        folderList[6]+"\\subjects.exm",
-        folderList[6]+"\\faculty.exm",
-        folderList[9]+"\\paths.exm",     // 13
+        folderList[9]+"\\paths.exm",     // 10
         folderList[9]+"\\file_list.exm",
         folderList[9]+"\\recent.exm",    
-        folderList[9]+"\\users.exm",     // 16
+        folderList[9]+"\\users.exm",     // 13
         folderList[9]+"\\integrity.exm",
         folderList[11]+"\\license.txt",  
-        folderList[11]+"\\contact.txt",  // 19
+        folderList[11]+"\\contact.txt",  // 16
         folderList[11]+"\\help.html"     
         };
     
