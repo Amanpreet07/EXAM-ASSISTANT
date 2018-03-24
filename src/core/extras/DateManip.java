@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DateManip {
 
-    public String getCurrentDT(String type) {
+    public static String getCurrentDT(String type) {
         Date date = new Date();
         // for detailed output
         SimpleDateFormat all = new SimpleDateFormat("EEEE dd-MMM-yyyy hh:mm:ss a");
@@ -18,6 +18,9 @@ public class DateManip {
         SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss a");
         // pattern for day only
         SimpleDateFormat day = new SimpleDateFormat("EEEE");
+        // pattern for month name only
+        SimpleDateFormat month = new SimpleDateFormat("MMMM");
+        
         switch (type) {
             case "all":
                 return all.format(date);
@@ -27,19 +30,22 @@ public class DateManip {
                 return time.format(date);
             case "day":
                 return day.format(date);
+            case "month":
+                return month.format(date);
             default:
                 // returns the date with pattern specified explicitly
                 return new SimpleDateFormat(type).format(date);
         }
     }
 
-    public Date getDateObj(String val, String type) {
+    public static Date getDateObj(String val, String type) {
 
         Date temp = null;
         SimpleDateFormat all = new SimpleDateFormat("EEEE dd-MMM-yyyy hh:mm:ss a");
         SimpleDateFormat dateonly = new SimpleDateFormat("dd-MMM-yyyy");
         SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss a");
         SimpleDateFormat day = new SimpleDateFormat("EEEE");
+        SimpleDateFormat month = new SimpleDateFormat("MMMM");
         try {
             switch (type) {
                 case "all":
@@ -50,6 +56,8 @@ public class DateManip {
                     temp = time.parse(val);
                 case "day":
                     temp = day.parse(val);
+                case "month":
+                    temp = month.parse(val);
                 default:
                     // to explicitly specify the format 
                     temp = new SimpleDateFormat(type).parse(val);
@@ -60,7 +68,7 @@ public class DateManip {
         return temp;
     }
 
-    public String timeInBetween(Date d1, Date d2) {
+    public static String timeInBetween(Date d1, Date d2) {
         // d1 is most likely to be present date in the software
         // d2 is to be compared with
 
@@ -93,13 +101,13 @@ public class DateManip {
         }
     }
 
-    public int compareDates(Date d1, Date d2) {
+    public static int compareDates(Date d1, Date d2) {
         // to check for d1 in respect to d2.
         // -1 for before, 0 for equal and 1 for after
         return d1.compareTo(d2);
     }
     
-    public int compareDates(String d1, String d2, String format){
+    public static int compareDates(String d1, String d2, String format){
         int status = 0;
         try {
             SimpleDateFormat sdf = new SimpleDateFormat(format);
