@@ -79,8 +79,23 @@ public class Builder {
         switch (type) {
             case "log_guest":
                 path = b.folderList[8];
+                break;
             case "log_admin":
                 path = b.folderList[5];
+                break;
+            case "stats":
+                path = b.folderList[6];
+                break;
+            case "ins_counts":
+                path = b.fileList[5];
+                break;
+            case "ins_profile":
+                path = b.fileList[4];
+                break;
+            case "admin_profile":
+                path = b.fileList[0];
+                break;
+            // complete this.......
             default:
         }
 

@@ -3,7 +3,6 @@ package core.elogger;
 // Purpose: To handle all the logs RW
 import core.Holder;
 import core.extras.DateManip;
-import core.data_manager.Builder;
 import java.io.File;
 import java.io.IOException;
 import setup.SetupManager;
@@ -29,8 +28,10 @@ public class E_Logger {
         File file = null; // needed for getting name list
         // save log folders to avoid processing while multiple comparisons further
         // in the code
-        String adminLogPath = Builder.returnPath("log_admin");
-        String guestLogPath = Builder.returnPath("log_guest");
+        String adminLogPath = System.getProperty("user.home") + "\\ExamAssistant"
+                + "\\user\\logs";
+        String guestLogPath = System.getProperty("user.home") + "\\ExamAssistant"
+                + "\\global\\temp";
         boolean found = false; // flag for matching folder name
 
         if (user.equals("ADMIN")) {

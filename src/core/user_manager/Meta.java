@@ -3,7 +3,7 @@ package core.user_manager;
 
 import java.io.Serializable;
 
-public class meta implements Serializable{
+public class Meta implements Serializable{
     
     private String username;
     private String password;
@@ -33,7 +33,7 @@ public class meta implements Serializable{
     "what is your favorite social media website?"
     };
 
-    public meta(String username, String password, String securityAnswer, String securityQuestion, String email) {
+    public Meta(String username, String password, String securityAnswer, String securityQuestion, String email) {
         this.username = username;
         this.password = password;
         this.securityAnswer = securityAnswer;

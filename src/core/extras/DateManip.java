@@ -50,14 +50,19 @@ public class DateManip {
             switch (type) {
                 case "all":
                     temp = all.parse(val);
+                    break;
                 case "date":
                     temp = dateonly.parse(val);
+                    break;
                 case "time":
                     temp = time.parse(val);
+                    break;
                 case "day":
                     temp = day.parse(val);
+                    break;
                 case "month":
                     temp = month.parse(val);
+                    break;
                 default:
                     // to explicitly specify the format 
                     temp = new SimpleDateFormat(type).parse(val);
