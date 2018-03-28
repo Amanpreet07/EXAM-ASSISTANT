@@ -1,7 +1,6 @@
 package core.data_manager;
 // Purpose: To manage the RW for user credentials...
 
-import core.user_manager.Admin;
 import core.user_manager.Meta;
 import java.io.EOFException;
 import java.io.FileInputStream;
