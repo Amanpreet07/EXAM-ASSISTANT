@@ -37,7 +37,8 @@ public class Admin implements Serializable{
         this.routine = routine;
     }
 
-    
+    public Admin() {
+    } 
 
     public String getName() {
         return name;

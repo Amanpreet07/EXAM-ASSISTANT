@@ -3,5 +3,8 @@
  */
 
 .mainFxmlClass {
-
+.anchor {
+    -fx-background-image:url('C:\Users\Dell\Desktop\Login.jpg');
+}
+    
 }

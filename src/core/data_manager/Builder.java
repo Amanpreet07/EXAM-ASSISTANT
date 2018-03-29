@@ -95,6 +95,9 @@ public class Builder {
             case "admin_profile":
                 path = b.fileList[0];
                 break;
+            case "paper":
+                path = b.folderList[4];
+                break;
             // complete this.......
             default:
         }
