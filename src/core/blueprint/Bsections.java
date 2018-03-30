@@ -6,10 +6,11 @@ public class Bsections {
     private String font;
     private int alignment;
     private int size;
-    private int marksVisibilty;
     private int qsize;
     private int qalignment;
     private Bquestions ques[];
+    private int marksVisibilty; // not using...
+    
 
     public Bsections(String label, String font, int alignment, int size, int marksVisibilty, int qsize, int qalignment, Bquestions[] ques) {
         this.label = label;

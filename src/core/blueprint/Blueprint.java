@@ -32,10 +32,13 @@ public class Blueprint implements Serializable{
     // -> marks visibility : No/after question:atomic/on section label:net/Both
     // if multiple, can be supported by section labels and their weightage.
     
-    private final String FONT = FontFactory.TIMES_ROMAN;
-    private final String FONTB = FontFactory.TIMES_BOLD;
-    private final String FONTI = FontFactory.TIMES_ITALIC;
-    private final String FONTBI = FontFactory.TIMES_BOLDITALIC;
+    // for instructions.. to make a instruction header, make first as a heading.
+    // with alias as required by the user
+    
+//    private final String FONT = FontFactory.TIMES_ROMAN;
+//    private final String FONTB = FontFactory.TIMES_BOLD;
+//    private final String FONTI = FontFactory.TIMES_ITALIC;
+//    private final String FONTBI = FontFactory.TIMES_BOLDITALIC;
     
     // variables ↓↓↓
     

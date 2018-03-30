@@ -12,8 +12,11 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.draw.VerticalPositionMark;
+import core.blueprint.Binstructions;
 import core.blueprint.Blueprint;
 import core.blueprint.Bmeta;
+import core.blueprint.Bquestions;
+import core.blueprint.Bsections;
 import core.user_manager.Admin;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -158,7 +161,7 @@ public class PdfManager {
         // pos 1 : left alignment
         // pos 2 : right alignment
         Bmeta b = null;
-        if (pos==2) {
+        if (pos == 2) {
             // if alignment is right
             for (Bmeta arr1 : arr) {
                 if (arr1.getGroupNumber() == order) {
@@ -167,7 +170,7 @@ public class PdfManager {
                     }
                 }
             }
-        } else if(pos==1){
+        } else if (pos == 1) {
             // if alignment is left
             for (Bmeta arr1 : arr) {
                 if (arr1.getGroupNumber() == order) {
@@ -176,11 +179,10 @@ public class PdfManager {
                     }
                 }
             }
-        }
-        else{
+        } else {
             // for pos 0
             for (Bmeta arr1 : arr) {
-                if(arr1.getGroupNumber() == order){
+                if (arr1.getGroupNumber() == order) {
                     b = arr1;
                 }
             }
@@ -200,69 +202,127 @@ public class PdfManager {
         dc.addAuthor(new Admin().getName());
         dc.addCreationDate();
 
-        PdfWriter.getInstance(dc, new 
-            FileOutputStream(Builder.returnPath("paper") + "\\" + filename));
+        PdfWriter.getInstance(dc, new FileOutputStream(Builder.returnPath("paper") + "\\" + filename));
         dc.open();
 
         // Blueprint writing...
         // b meta writing
         Bmeta obj[] = b.getBmeta();
-           
-            for (int i = 1; i <= 10; i++) {
-                Bmeta obj1 = findObject(obj, 0, i);
-                 if(obj1 == null){
-                     break;
-                     // if no object found..stop the iteration..
-                 }
-            
-                    if (obj1.isGroup()) {
-                        // if its a group
-                        lElement = findObject(obj, 1, obj1.getGroupNumber());
-                        rElement = findObject(obj, 2, obj1.getGroupNumber());
-                        // chunk is to align para into left and right
-                        Chunk ch1 = new Chunk(new VerticalPositionMark());
-                        if (lElement.getAlias() == null) {
-                            // if alias is null, leave it blank...only value
-                            value = lElement.getValue();
-                        } else {
-                            value = lElement.getAlias() + lElement.getValue();
-                        }
-                        Paragraph p = new Paragraph();
-                        Chunk ch = new Chunk(value, 
-                            FontFactory.getFont(lElement.getFont(),lElement.getSize()));
-                        p.add(ch);
-                        // first element at left position ↑
-                        // second element, Blank space in between ↓
-                        p.add(ch1);
-                        // Third element in the right
-                        if (rElement.getAlias() == null) {
-                            // if alias is null, leave it blank...only value
-                            value = rElement.getValue();
-                        } else {
-                            value = rElement.getAlias() + rElement.getValue();
-                        }
-                        Chunk ch2 = new Chunk(value,
-                            FontFactory.getFont(rElement.getFont(),rElement.getSize()));
-                        p.add(ch2);
-                        dc.add(p);
 
-                    } else {
-                        // if not a group then write simply
-                        if (obj1.getAlias() == null) {
-                            // if alias is null, leave it blank...only value
-                            value = obj1.getValue();
-                        } else {
-                            value = obj1.getAlias() + obj1.getValue();
-                        }
-                        Paragraph p1 = new Paragraph(value,
-                                FontFactory.getFont(obj1.getFont(), obj1.getSize()));
-                        p1.setAlignment(obj1.getAlignment());
-                        dc.add(p1);
-                    }
-                    break;
-           
-            } // meta writing done
-        } 
+        for (int i = 1; i <= 10; i++) {
+            Bmeta obj1 = findObject(obj, 0, i);
+            if (obj1 == null) {
+                break;
+                // if no object found..stop the iteration..
+            }
 
-    }
+            if (obj1.isGroup()) {
+                // if its a group
+                lElement = findObject(obj, 1, obj1.getGroupNumber());
+                rElement = findObject(obj, 2, obj1.getGroupNumber());
+                // chunk is to align para into left and right
+                Chunk ch1 = new Chunk(new VerticalPositionMark());
+                if (lElement.getAlias() == null) {
+                    // if alias is null, leave it blank...only value
+                    value = lElement.getValue();
+                } else {
+                    value = lElement.getAlias() + lElement.getValue();
+                }
+                Paragraph p = new Paragraph();
+                Chunk ch = new Chunk(value,
+                        FontFactory.getFont(lElement.getFont(), lElement.getSize()));
+                p.add(ch);
+                // first element at left position ↑
+                // second element, Blank space in between ↓
+                p.add(ch1);
+                // Third element in the right
+                if (rElement.getAlias() == null) {
+                    // if alias is null, leave it blank...only value
+                    value = rElement.getValue();
+                } else {
+                    value = rElement.getAlias() + rElement.getValue();
+                }
+                Chunk ch2 = new Chunk(value,
+                        FontFactory.getFont(rElement.getFont(), rElement.getSize()));
+                p.add(ch2);
+                dc.add(p);
 
+            } else {
+                // if not a group then write simply
+                if (obj1.getAlias() == null) {
+                    // if alias is null, leave it blank...only value
+                    value = obj1.getValue();
+                } else {
+                    value = obj1.getAlias() + obj1.getValue();
+                }
+                Paragraph p1 = new Paragraph(value,
+                        FontFactory.getFont(obj1.getFont(), obj1.getSize()));
+                p1.setAlignment(obj1.getAlignment());
+                dc.add(p1);
+            }
+            break;
+
+        } // meta writing done
+
+        // instructions ↓
+        if (b.isIns()) {
+            // write instructions..
+            String insFont;
+            int insSize;
+            int insAlignment;
+            Binstructions bins[] = b.getBins();
+            // if styling is similar
+            if (!b.isInsStyleUnique()) {
+                insFont = b.getInsFont();
+                insSize = b.getInsSize();
+                insAlignment = b.getInsAlignment();
+                Paragraph p1;
+                for (Binstructions bi : bins) {
+                    p1 = new Paragraph(bi.getValue(), FontFactory.getFont(insFont, insSize));
+                    p1.setAlignment(insAlignment);
+                    dc.add(p1);
+                }
+            } else {
+                // if not ... use the object values.
+                Paragraph p1;
+                for (Binstructions bi : bins) {
+                    p1 = new Paragraph(bi.getValue(), FontFactory.getFont(bi.getFont(), bi.getSize()));
+                    p1.setAlignment(bi.getAlignment());
+                    dc.add(p1);
+
+                }
+            } // instruction writing ends
+
+        } else {
+            // do not write instructions
+        }
+
+        // questions and sections..
+        int secCount = b.getSectionCount();
+    //  int secArr[] = b.getSectionQuestionCount();
+        Bsections bSecObj[] = b.getBsec();
+        Bsections temp;
+        Bquestions temp2[];
+        for (int i = 0; i < secCount; i++) {
+            // to scan all sections..
+            temp = bSecObj[i]; // current object to work on.   
+            Paragraph p2 = new Paragraph(temp.getLabel(),
+                    FontFactory.getFont(temp.getFont(), temp.getSize()));
+            p2.setAlignment(temp.getAlignment());
+          dc.add(p2);
+          // label written.
+          temp2 = temp.getQues();
+            for (Bquestions pt2 : temp2) {
+             Paragraph p3 = new Paragraph(pt2.getValue(), 
+             FontFactory.getFont(temp.getFont(), temp.getQsize()));
+             p3.setAlignment(temp.getQalignment());
+             dc.add(p3);
+            }
+            // questions writing done.
+          
+        }
+        dc.close();
+    } // pdf writing done 
+
+
+}
