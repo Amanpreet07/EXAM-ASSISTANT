@@ -8,6 +8,9 @@ public class Binstructions {
     private int size;
     private String font;
 
+    public Binstructions() {
+    }
+
     public Binstructions(String value, int alignment, int size, String font) {
         this.value = value;
         this.alignment = alignment;

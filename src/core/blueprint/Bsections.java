@@ -23,6 +23,9 @@ public class Bsections {
         this.ques = ques;
     }
 
+    public Bsections() {
+    }
+
     public String getLabel() {
         return label;
     }

@@ -24,6 +24,9 @@ public class Bmeta {
         this.size = size;
     }
 
+    public Bmeta() {
+    }
+
     public String getValue() {
         return value;
     }

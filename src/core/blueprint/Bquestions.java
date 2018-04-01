@@ -11,6 +11,9 @@ public class Bquestions {
         return value;
     }
 
+    public Bquestions() {
+    }
+
     public void setValue(String value) {
         this.value = value;
     }

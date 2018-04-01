@@ -53,10 +53,27 @@ public class Blueprint implements Serializable{
     private int sectionQuestionCount[];
     private Bsections bsec[];
 
+    public Blueprint(Bmeta[] bmeta, boolean Ins, boolean insStyleUnique, String insFont, int insSize, int insAlignment, Binstructions[] bins, int sectionCount, int[] sectionQuestionCount, Bsections[] bsec) {
+        this.bmeta = bmeta;
+        this.Ins = Ins;
+        this.insStyleUnique = insStyleUnique;
+        this.insFont = insFont;
+        this.insSize = insSize;
+        this.insAlignment = insAlignment;
+        this.bins = bins;
+        this.sectionCount = sectionCount;
+        this.sectionQuestionCount = sectionQuestionCount;
+        this.bsec = bsec;
+    }
+
+    public Blueprint() {
+    }
+
     public Bmeta[] getBmeta() {
         return bmeta;
     }
 
+    
     public void setBmeta(Bmeta[] bmeta) {
         this.bmeta = bmeta;
     }
