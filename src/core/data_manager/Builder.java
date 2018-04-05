@@ -3,11 +3,15 @@ package core.data_manager;
 // Purpose: to deal with directories in the background.
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
 
 public class Builder {
 
     public String rootPath = System.getProperty("user.home") + "\\ExamAssistant";
-
+    private static ArrayList<String> missingFolders = new ArrayList<>();
+    private static ArrayList<String> missingFiles = new ArrayList<>();
+    
     public String folderList[] = {
         rootPath + "\\user", // just numbers to quickly find index number
         rootPath + "\\user\\blueprints",
@@ -65,11 +69,44 @@ public class Builder {
         return status;
     }
 
-    // method to verify the core files and their last known size
-    public static int checkIntegrity() {
-        int status = 1; // 0 is error, 1 is good
+    // to look for core files 
+    public boolean validate() {
+        boolean success = true;
+        File f;
+        for (String list : folderList) {
+            f = new File(list);
+            if (!f.exists()) {
+                // if folder not found.
+                success = false;
+                missingFolders.add(list); // to add to list of missing files
+            }
+        }
+        for (String list2 : fileList) {
+            f = new File(list2);
+            if (!f.exists()) {
+                // file does not exist
+                success = false;
+                missingFiles.add(list2);
+            }
+        }
+        return success;
+    }
 
-        return status;
+    // method to verify the core files and their last known size
+    public static boolean checkIntegrity() {
+        boolean success = true;
+        long newSize = 0;
+        try {
+            newSize = Files.size(new File(returnPath("integrity")).toPath());
+        } catch (Exception e) {
+            success = false;
+        }
+        String val = new MetaManager().readIntegrity(); // reads from the file
+        long oldSize = Long.parseLong(val);
+        if (newSize != oldSize) {
+            success = false;
+        }
+        return success;
     }
 
     // method to return paths of folders and files.
@@ -98,6 +135,12 @@ public class Builder {
             case "paper":
                 path = b.folderList[4];
                 break;
+            case "integrity":
+                path = b.fileList[14];
+                break;
+            case "meta":
+                path = b.folderList[9];
+                break;
             // complete this.......
             default:
         }
@@ -108,7 +151,22 @@ public class Builder {
     // method to rebuilt core files
     public static boolean attempRepair() {
         boolean success = true;
-
+        Builder b = new Builder();
+        File f;
+        try{
+        for (String folder : Builder.missingFolders) {
+            f = new File(folder);
+            f.mkdir();
+        }
+        for (String file : Builder.missingFiles) {
+            f = new File(file);
+            f.createNewFile();
+        }
+        Default.writeDefault(missingFiles.toArray(new String[missingFiles.size()]));
+        
+        }catch(Exception e){
+            success = false;
+        }
         return success;
     }
 }
