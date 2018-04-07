@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="550.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assistant.HomeScreenController">
+   <children>
+      <VBox prefHeight="550.0" prefWidth="229.0" spacing="8.0" styleClass="custom_root" stylesheets="@homescreen.css">
+         <children>
+            <HBox>
+               <children>
+                  <Region maxWidth="75.0" prefHeight="64.0" prefWidth="75.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                     <image>
+                        <Image url="@../resources/images/HomeScreen/circuit.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region layoutX="10.0" layoutY="10.0" maxWidth="75.0" prefHeight="64.0" prefWidth="75.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Region maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="10.0" prefWidth="220.0" VBox.vgrow="ALWAYS" />
+            <Separator prefWidth="200.0" />
+            <JFXButton fx:id="home_dashboard" alignment="TOP_LEFT" graphicTextGap="10.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_dashboard" prefHeight="37.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="DASHBOARD" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" fontSmoothingType="LCD" glyphName="VIEW_DASHBOARD" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="home_profile" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="518.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_profile" prefHeight="35.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="PROFILE" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_BOX_OUTLINE" size="28" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="home_blueprint" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="476.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_blueprint" prefHeight="35.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="BLUEPRINTS" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="PUZZLE" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="home_bank" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="434.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_bank" prefHeight="35.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="Q-BANK" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="WALLET_TRAVEL" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="home_institution" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="518.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_institution" prefHeight="35.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="INSTITUTION" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="INSTITUTION" size="23" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="home_paper" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="518.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_paper" prefHeight="35.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="PAPER" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CONTENT_PASTE" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="home_settings" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="476.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_settings" prefHeight="35.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="SETTINGS" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="home_help" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="518.0" maxHeight="40.0" maxWidth="220.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_help" prefHeight="35.0" prefWidth="220.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@homescreen.css" text="HELP" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="HELP" size="25" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXButton>
+            <Region maxHeight="350.0" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="220.0" VBox.vgrow="ALWAYS" />
+            <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="220.0" spacing="15.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <MaterialDesignIconView accessibleRole="BUTTON" fill="WHITE" glyphName="GMAIL" size="30" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip opacity="0.9" text="arora07aman@gmail.com">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <MaterialDesignIconView accessibleRole="BUTTON" fill="WHITE" glyphName="TWITTER" size="30" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip opacity="0.9" text="\@aman_damiens">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="76.0" layoutY="10.0" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <MaterialDesignIconView accessibleRole="BUTTON" fill="WHITE" glyphName="LINKEDIN_BOX" size="30" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip opacity="0.9" text="linkedin.com/in/amanpreetsingh07/">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="142.0" layoutY="10.0" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <MaterialDesignIconView accessibleRole="BUTTON" fill="WHITE" glyphName="GITHUB_CIRCLE" size="30" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip opacity="0.9" text="github.com/Amanpreet07">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox HBox.hgrow="SOMETIMES">
+         <children>
+            <HBox fx:id="topBar" minHeight="35.0" minWidth="40.0" prefHeight="35.0" prefWidth="750.0" styleClass="custom_root2" stylesheets="@homescreen.css">
+               <children>
+                  <Region maxHeight="1.7976931348623157E308" maxWidth="400.0" minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="200.0" stylesheets="@homescreen.css" HBox.hgrow="ALWAYS" />
+                  <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="190.0" styleClass="button-text" text="EXAM ASSISTANT" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="20.0" />
+                     </font>
+                  </Label>
+                  <Region maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="300.0" stylesheets="@homescreen.css" HBox.hgrow="ALWAYS" />
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_minimize" prefHeight="25.0" prefWidth="25.0" ripplerFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MINUS_SQUARE_ALT" size="23" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="703.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_maximize" prefHeight="25.0" prefWidth="25.0" ripplerFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="2.0" top="1.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <MaterialDesignIconView glyphName="WINDOW_MAXIMIZE" size="25" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="702.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_close" prefHeight="25.0" prefWidth="25.0" ripplerFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" size="25" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="515.0" prefWidth="750.0" style="-fx-background-color: #323232;" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

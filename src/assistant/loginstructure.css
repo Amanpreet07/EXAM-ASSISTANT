@@ -1,0 +1,82 @@
+.mainFxmlClass {
+
+    
+    
+    
+}
+// #############################################################
+// FOR DEFAULT SCREEN
+.defaultScreen_loginButton{
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+}
+.defaultScreen_loginButton:hover{
+    -fx-border-color: #1565c0;
+    -fx-text-fill: #1565c0;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+}
+.label_color_profile{
+    -fx-text-fill: #000000;
+}
+.jfx-text-field:hover{
+    -fx-fill: #1565c0;   
+    -fx-text-fill: #1565c0;
+    -fx-prompt-text-fill: #1565c0;    
+    
+}
+.jfx-password-field:hover{
+    -fx-fill: #1565c0;   
+    -fx-text-fill: #1565c0;
+    -fx-prompt-text-fill: #1565c0;  
+}
+.label_color_profile:hover{
+    -fx-text-fill: #1565c0;
+}
+.label_color_profile2{
+    -fx-text-fill: #000000;
+}
+.label_info{
+    -fx-text-fill: #000000;
+}
+.label_info:hover{
+   -fx-text-fill: #e53935;  
+}
+.glyph-icon:hover{
+    -fx-fill: #1565c0;
+}
+.glyph-icon{
+    -fx-fill: #000000;
+}
+.button:hover .glyph-icon{
+    -fx-fill: #1565c0;
+}
+
+// #############################################################
+// FOR STRUCTURE SCREEN
+.defaultScreen_structureButton:hover{
+   -fx-border-color:  #1565c0;
+   -fx-text-fill:  #1565c0;
+   -fx-border-width: 2
+   
+    
+}
+.defaultScreen_structureButton{
+ //  -fx-border-color:  #000000;
+    
+}
+/*.my-button {
+    -fx-graphic: url("F:\Repository\Git repositories\Exam Assistant
+        \src\resources\images\Login\circuit-black.png");
+}
+
+.my-button:hover {
+    -fx-graphic: url("F:\Repository\Git repositories\Exam Assistant
+        \src\resources\images\Login\circuit-white.png");
+}*/
+
+// ##############################################################
+// FOR RECOVERY SCREEN
+
+

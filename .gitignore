@@ -2,6 +2,7 @@ nbproject/
 build/
 nbbuild/
 dist/
+src/resources/
 dist/*.jnlp
 dist/*.html
 dist/web-files/

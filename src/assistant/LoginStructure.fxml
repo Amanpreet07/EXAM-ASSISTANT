@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="base" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="815.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assistant.LoginStructureController">
+   <children>
+      <AnchorPane prefHeight="474.0" prefWidth="105.0">
+         <children>
+            <JFXButton fx:id="str_signIn" contentDisplay="CENTER" layoutY="99.0" onAction="#action_str_signIn" prefHeight="45.0" prefWidth="105.0" ripplerFill="#b2adad" styleClass="defaultScreen_structureButton" stylesheets="@loginstructure.css" text="&gt; Sign In">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="str_signUp" contentDisplay="CENTER" layoutY="241.0" onAction="#action_str_signUp" prefHeight="45.0" prefWidth="105.0" ripplerFill="#b2adad" styleClass="defaultScreen_structureButton" stylesheets="@loginstructure.css" text="Sign Up">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="str_guest" contentDisplay="CENTER" layoutY="311.0" onAction="#action_str_guest" prefHeight="45.0" prefWidth="105.0" ripplerFill="#b2adad" styleClass="defaultScreen_structureButton" stylesheets="@loginstructure.css" text="Guest">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="str_recovery" contentDisplay="CENTER" layoutY="171.0" onAction="#action_str_forgot" prefHeight="45.0" prefWidth="105.0" ripplerFill="#b2adad" styleClass="defaultScreen_structureButton" stylesheets="@loginstructure.css" text="Recover">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <HBox layoutX="13.0" layoutY="10.0" spacing="7.0">
+               <children>
+                  <JFXButton fx:id="def_close" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_close" prefHeight="20.0" prefWidth="20.0" ripplerFill="WHITE" stylesheets="@loginstructure.css" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" size="28" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="def_minimize" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_minimize" prefHeight="20.0" prefWidth="20.0" ripplerFill="WHITE" stylesheets="@loginstructure.css" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MINUS_SQUARE_ALT" size="25" text="" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="105.0" prefHeight="474.0" prefWidth="343.0" style="-fx-background-color: #1565c0;">
+         <children>
+            <Label layoutX="26.0" layoutY="229.0" prefHeight="35.0" prefWidth="295.0" text="Welcome to Exam Assistant" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="290.0" prefHeight="35.0" prefWidth="295.0" text="Project by:" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="325.0" prefHeight="35.0" prefWidth="295.0" text="Aman Preet Singh" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="360.0" prefHeight="35.0" prefWidth="295.0" text="arora07aman@gmail.com" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="104.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/Login/circuit-white.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="str_anchor" layoutX="448.0" prefHeight="474.0" prefWidth="365.0">
+         <children>
+            <AnchorPane prefHeight="474.0" prefWidth="365.0" stylesheets="@loginstructure.css">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="60.0" prefHeight="28.0" prefWidth="179.0" styleClass="label_color_profile2" stylesheets="@loginstructure.css" text="ADMIN LOGIN" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="93.0" layoutY="88.0" prefHeight="3.0" prefWidth="179.0" styleClass="label_color_profile" stylesheets="@loginstructure.css" />
+                  <HBox layoutX="44.0" layoutY="196.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="USER" size="35">
+                           <HBox.margin>
+                              <Insets right="10.0" top="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <JFXTextField fx:id="def_username" focusColor="BLACK" maxWidth="244.0" minWidth="216.0" prefHeight="44.0" prefWidth="244.0" promptText="USERNAME" styleClass="jfx-text-field" unFocusColor="#aeaeae">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="38.0" layoutY="258.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="KEY" size="32">
+                           <HBox.margin>
+                              <Insets left="5.0" right="7.0" top="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <JFXPasswordField fx:id="def_password" focusColor="BLACK" maxWidth="244.0" minWidth="223.0" prefHeight="44.0" prefWidth="244.0" promptText="PASSWORD" styleClass="jfx-password-field" unFocusColor="#aeaeae">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="def_login" layoutX="117.0" layoutY="370.0" onAction="#action_def_login" prefHeight="41.0" prefWidth="131.0" ripplerFill="#b2adad" styleClass="defaultScreen_loginButton" stylesheets="@loginstructure.css" text="Login">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="def_info" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="441.0" prefHeight="17.0" prefWidth="324.0" styleClass="label_info" stylesheets="@loginstructure.css" text="info" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="171.0" layoutY="149.0" size="30" styleClass="glyph-icon" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

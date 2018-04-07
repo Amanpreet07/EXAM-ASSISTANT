@@ -11,8 +11,7 @@ public class Meta implements Serializable{
     private String securityQuestion;
     private String email;
     
-    private final String[] ques = {       
-    "Which phone number do you remember most from your childhood?",
+    private final String[] ques = {   
     "What was your favorite place to visit as a child?",
     "Who is your favorite actor, musician, or artist?",
     "What is the name of your favorite pet?",

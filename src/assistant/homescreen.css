@@ -1,7 +1,48 @@
-/*
- * Empty Stylesheet file.
- */
-
 .mainFxmlClass {
 
+   
 }
+
+/*.my-image{
+ -fx-image: url("F:\Repository\Git repositories\Exam Assistant\src\
+     resources\images\HomeScreen\circuit.png");
+}
+.my-image:hover{
+ -fx-image: url("");   
+}*/
+
+
+.button-text{
+    -fx-text-fill: black;
+}
+
+.custom_root{
+    
+    -fx-background-color: #ffffff;
+    -fx-border-color: black;
+    -fx-border-width: 2 0 2 2;
+}
+
+.custom_root2{
+    
+    -fx-background-color: #ffffff;
+    -fx-border-color: black;
+    -fx-border-width: 2 2 0 2;
+}
+
+.button .glyph-icon{
+    -fx-fill: black;
+}
+.button:hover .glyph-icon{
+    -fx-fill: #1565c0;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.button:hover {
+   -fx-text-fill: #1565c0;
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+
+
