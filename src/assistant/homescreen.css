@@ -1,6 +1,14 @@
-.mainFxmlClass {
-
-   
+/** {
+-bgColor: #000000; // black
+-themeColor: #ff7043; // orange
+-borderColor: #ffffff; //white
+-hoverFill: #ffffff; // white
+}*/
+*{
+-bgColor: #1565c0; 
+-themeColor: #ffffff; 
+-borderColor: #1565c0; //white
+-hoverFill: #ffffff; // white
 }
 
 /*.my-image{
@@ -11,36 +19,40 @@
  -fx-image: url("");   
 }*/
 
-
-.button-text{
-    -fx-text-fill: black;
-}
-
 .custom_root{
     
-    -fx-background-color: #ffffff;
-    -fx-border-color: black;
+    -fx-background-color: -bgColor;
+    -fx-border-color: -borderColor;
     -fx-border-width: 2 0 2 2;
 }
 
 .custom_root2{
     
-    -fx-background-color: #ffffff;
-    -fx-border-color: black;
+    -fx-background-color: -bgColor;
+    -fx-border-color: -borderColor;
     -fx-border-width: 2 2 0 2;
 }
 
+.custom_root3{
+    
+    -fx-background-color: #ffffff;
+    -fx-border-color: -borderColor;
+    -fx-border-width: 2 2 2 2;
+}
+
+.button-text{
+    -fx-text-fill: -themeColor;
+}
 .button .glyph-icon{
-    -fx-fill: black;
+    -fx-fill: -themeColor;
 }
 .button:hover .glyph-icon{
-    -fx-fill: #1565c0;
+    -fx-fill: -hoverFill;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
-
 .button:hover {
-   -fx-text-fill: #1565c0;
+   -fx-text-fill: -hoverFill;
    -fx-scale-x: 1.1;
    -fx-scale-y: 1.1;
 }

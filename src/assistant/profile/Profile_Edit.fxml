@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="515.0" prefWidth="784.0" stylesheets="@profile_edit.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assistant.profile.Profile_EditController">
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+   <children>
+      <HBox layoutX="25.0" layoutY="25.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="720.0" spacing="15.0" styleClass="first" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+         <children>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="78.0" stylesheets="@profile_edit.css" text="*NAME : " HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="name" focusColor="#f8f8f8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="250.0" styleClass="jf-text-field" stylesheets="@profile_edit.css" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </JFXTextField>
+            <Region maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="34.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <RadioButton fx:id="male" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="108.0" stylesheets="@profile_edit.css" text="MALE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="radio_group" />
+               </toggleGroup>
+               <graphic>
+                  <MaterialDesignIconView glyphName="GENDER_MALE" size="25" />
+               </graphic>
+            </RadioButton>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <RadioButton fx:id="female" layoutX="368.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="126.0" text="FEMALE" toggleGroup="$radio_group" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView glyphName="GENDER_FEMALE" size="25" />
+               </graphic>
+            </RadioButton>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox layoutX="25.0" layoutY="25.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="75.0" prefWidth="720.0" spacing="15.0" styleClass="second">
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+         <children>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="70.0" stylesheets="@profile_edit.css" text="*AGE :" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+            <JFXSlider fx:id="age" blockIncrement="5.0" majorTickUnit="10.0" max="80.0" maxHeight="-Infinity" min="18.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" showTickLabels="true" showTickMarks="true" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </JFXSlider>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="age_label" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="50.0" text="25">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Verdana Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <VBox styleClass="third">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="696.0" spacing="20.0">
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="184.0" stylesheets="@profile_edit.css" text="INSTITUTION NAME :">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="iName" focusColor="#f8f8f8" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" styleClass="jfx-text-field" stylesheets="@profile_edit.css" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="696.0" spacing="20.0">
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="186.0" stylesheets="@profile_edit.css" text="JOB/WORK PROFILE :">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="iProfile" focusColor="#f8f8f8" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" styleClass="jfx-text-field" stylesheets="@profile_edit.css" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="696.0" spacing="20.0">
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="182.0" stylesheets="@profile_edit.css" text="INSTITUTION ID No. :">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="iId" focusColor="#f8f8f8" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" styleClass="jfx-text-field" stylesheets="@profile_edit.css" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox layoutX="10.0" layoutY="90.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="696.0" spacing="20.0">
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="50.0" stylesheets="@profile_edit.css" text="TYPE :">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="school" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="94.0" text="SCHOOL" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radio_group1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="college" layoutX="261.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="203.0" text="COLLEGE/UNIVERSITY" toggleGroup="$radio_group1" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="training" layoutX="394.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="155.0" text="TRAINING ORG." toggleGroup="$radio_group1" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="other" layoutX="507.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="138.0" text="OTHER" toggleGroup="$radio_group1" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Separator prefWidth="200.0" />
+      <VBox layoutX="25.0" layoutY="196.0">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="696.0" spacing="20.0">
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+               <children>
+                  <MaterialDesignIconView fill="#297911" glyphName="PHONE" size="32" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <JFXTextField fx:id="contact" focusColor="BLACK" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" stylesheets="@profile_edit.css" unFocusColor="#757575" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+               <children>
+                  <MaterialDesignIconView fill="#00aced" glyphName="TWITTER" size="32" />
+                  <JFXTextField fx:id="twitter" focusColor="BLACK" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" stylesheets="@profile_edit.css" unFocusColor="#757575" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <MaterialDesignIconView fill="#e80000" glyphName="GMAIL" size="32" />
+                  <JFXTextField fx:id="email" focusColor="BLACK" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" stylesheets="@profile_edit.css" unFocusColor="#757575">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <MaterialDesignIconView fill="#007bb6" glyphName="LINKEDIN_BOX" size="32" />
+                  <JFXTextField fx:id="linkedin" focusColor="BLACK" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" stylesheets="@profile_edit.css" unFocusColor="#757575">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Region prefHeight="200.0" prefWidth="200.0" />
+      <Separator prefHeight="0.0" prefWidth="446.0" />
+      <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="720.0" spacing="15.0" styleClass="first" stylesheets="@profile_edit.css" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+         <children>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="300.0" stylesheets="@profile_edit.css" text="ACCOUNT CREATED ON : 26-10-2018" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+            </Label>
+            <Region maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="34.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_cancel" prefHeight="34.0" prefWidth="120.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@profile_edit.css" text="CANCEL" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView glyphName="ACCOUNT_REMOVE" size="25" />
+               </graphic>
+            </JFXButton>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <JFXButton layoutX="602.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_update" prefHeight="34.0" prefWidth="120.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@profile_edit.css" text="UPDATE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView glyphName="ACCOUNT_CHECK" size="25" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

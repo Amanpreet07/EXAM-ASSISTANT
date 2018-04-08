@@ -19,6 +19,7 @@ public class ExamAssistant extends Application {
     public void start(Stage stage) throws IOException {
       
         Parent root = FXMLLoader.load(getClass().getResource("LoginStructure.fxml"));
+      //  Parent root = FXMLLoader.load(getClass().getResource("dashboard/DashboardMain.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         

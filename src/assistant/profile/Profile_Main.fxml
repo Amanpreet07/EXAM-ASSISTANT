@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="515.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assistant.profile.Profile_MainController">
+   <children>
+      <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="140.0" prefWidth="750.0" spacing="20.0" styleClass="top-Hbox" stylesheets="@profile_main.css" VBox.vgrow="ALWAYS">
+         <children>
+            <Circle fx:id="avatar" fill="WHITE" radius="60.0" stroke="WHITE" strokeWidth="2.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Circle>
+            <VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="250.0">
+               <children>
+                  <Region maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="name" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" text="NAME" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                  </Label>
+                  <Region layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <Region maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="122.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="130.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="130.0" VBox.vgrow="ALWAYS" />
+                  <JFXButton alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#action_edit" prefHeight="40.0" prefWidth="130.0" ripplerFill="WHITE" styleClass="button-text" stylesheets="@profile_main.css" text="EDIT " textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="25" />
+                     </graphic>
+                  </JFXButton>
+                  <Region layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="130.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="750.0" spacing="10.0" styleClass="two-Hbox" stylesheets="@profile_main.css" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Label fx:id="gender" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="100.0" text="MALE" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="age" layoutX="15.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="100.0" text="21" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+            </Label>
+            <Region maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="40.0" prefWidth="350.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="doc" alignment="CENTER_RIGHT" layoutX="125.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" prefWidth="315.0" text="26-OCT-1996" textFill="WHITE" HBox.hgrow="NEVER">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox prefHeight="160.0" prefWidth="750.0" styleClass="three-Hbox" stylesheets="@profile_main.css">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0" prefWidth="347.0">
+               <children>
+                  <HBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="347.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                           <image>
+                              <Image url="@../../resources/images/profile/id-card.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="4.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="position" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" text="STUDENT" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="iid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="347.0" text="ID : 14BCS5097" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="347.0" />
+               </children>
+            </VBox>
+            <Region maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0" prefWidth="347.0">
+               <children>
+                  <HBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="347.0" spacing="15.0">
+                     <children>
+                        <Label fx:id="institution" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="347.0" text="CHANDIGARH UNIVERSITY" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="itype" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="347.0" text="UNIVERSITY" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="347.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="165.0" prefWidth="750.0">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" top="4.0" />
+               </padding>
+               <children>
+                  <MaterialDesignIconView fill="#297911" glyphName="PHONE" size="32" />
+                  <Label fx:id="contact" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" text="9878393917">
+                     <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" top="4.0" />
+               </padding>
+               <children>
+                  <MaterialDesignIconView fill="#e80000" glyphName="GMAIL" size="32" />
+                  <Label fx:id="email" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" text="arora07aman@gmail.com">
+                     <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="93.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" top="4.0" />
+               </padding>
+               <children>
+                  <MaterialDesignIconView fill="#00aced" glyphName="TWITTER" size="32" />
+                  <Label fx:id="twitter" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" text="\@aman_damiens">
+                     <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" top="4.0" />
+               </padding>
+               <children>
+                  <MaterialDesignIconView fill="#007bb6" glyphName="LINKEDIN_BOX" size="32" />
+                  <Label fx:id="linkedin" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="300.0" text="Amanpreetsingh07">
+                     <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

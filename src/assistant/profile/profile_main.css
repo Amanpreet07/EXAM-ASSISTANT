@@ -1,0 +1,40 @@
+.mainFxmlClass {
+
+}
+*{
+  -mainColor: #ffffff; // white  
+}
+// top box
+.top-Hbox{
+    -fx-background-color: #0277bd;
+}
+
+// 2nd box
+.two-Hbox{
+    -fx-background-color: #0288d1;
+}
+
+// 3rd box
+.three-Hbox{
+    -fx-background-color: #039be5;
+}
+// root
+.button-text{
+    -fx-text-fill: -mainColor;
+    -fx-border-color: -maincolor;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+.button .glyph-icon{
+    -fx-fill: -mainColor;
+}
+.button:hover .glyph-icon{
+    -fx-fill: -mainColor;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.button:hover {
+   -fx-text-fill: -mainColor;
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}

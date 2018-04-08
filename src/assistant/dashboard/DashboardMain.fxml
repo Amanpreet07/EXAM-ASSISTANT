@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="515.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assistant.dashboard.DashboardMainController">
+   <children>
+      <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="750.0" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Region maxHeight="-Infinity" minHeight="-Infinity" prefHeight="31.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXHamburger fx:id="hamburger" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="40.0" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="480.0" prefWidth="750.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="480.0" prefWidth="500.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox maxWidth="-Infinity" prefHeight="480.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" direction="RIGHT" minHeight="0.0" minWidth="0.0" prefHeight="410.0" prefWidth="250.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="64.0" prefWidth="500.0" spacing="5.0">
+         <children>
+            <FontAwesomeIconView glyphName="STACK" />
+            <Label alignment="CENTER" prefHeight="64.0" prefWidth="64.0" text="5000">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="84.0" layoutY="10.0" prefHeight="64.0" prefWidth="64.0" text="5000">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="222.0" layoutY="10.0" prefHeight="64.0" prefWidth="64.0" text="5000">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

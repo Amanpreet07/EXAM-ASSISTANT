@@ -1,0 +1,86 @@
+
+.mainFxmlClass {
+  
+}
+// backgrounds
+.first{
+    -fx-background-color: #0288d1;
+}
+.second{
+    -fx-background-color: #0288d1;
+}
+.third{
+     -fx-background-color: #0288d1;
+}
+
+
+
+// extra properties
+
+*{
+ //-mainColor: white;   
+ -secColor: white;
+ //-terColor: #0277bd;
+}
+
+/*.bottom-bar{
+    -fx-background-color: #0277bd;
+}*/
+
+.button-text{
+    -fx-text-fill: -secColor;
+    -fx-border-color: -secColor;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+.button .glyph-icon{
+    -fx-fill: -secColor;
+}
+.button:hover .glyph-icon{
+  //  -fx-fill: -terColor;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.button:hover {
+/*   -fx-text-fill: -terColor;
+   -fx-border-color: -terColor;*/
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+
+.label{
+   -fx-text-fill: -secColor; 
+}
+
+.jfx-slider .thumb{
+   -fx-background-color: -secColor;
+}
+.jf-text-field{
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+.radio-button .glyph-icon{
+    -fx-fill: -secColor;
+}
+.radio-button:hover .glyph-icon{
+    -fx-fill: -secColor;
+}
+.radio-button.{
+    -fx-fill: -secColor;
+}
+.radio-button:hover{
+/*    -fx-fill: -terColor;*/
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.radio-button .text{
+    -fx-fill: -secColor;
+}
+.radio-button .radio .dot{
+    -fx-fill: -secColor;
+}
+
+/*.radio-button .text:hover{
+    -fx-fill: -terColor;
+}*/
