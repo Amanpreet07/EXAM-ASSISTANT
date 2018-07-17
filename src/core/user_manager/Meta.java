@@ -1,5 +1,5 @@
 package core.user_manager;
-// Purpose: to manage the admin credentials.
+// Purpose: to manage the admin login credentials.
 
 import java.io.Serializable;
 

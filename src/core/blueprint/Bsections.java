@@ -1,22 +1,25 @@
 package core.blueprint;
 // Purpose: To hold sections in blueprint
+
 public class Bsections {
     
-    private String label;
-    private String font;
-    private int alignment;
-    private int size;
-    private int qsize;
-    private int qalignment;
-    private Bquestions ques[];
-    private int marksVisibilty; // not using...
+    private String label;       // label of the section header
+    private String font;        // font size 
+    private int alignment;      // alignment of header L-C-R
+    private int size;           // header font size
+    private int qsize;          // question size
+    private int qalignment;     // question alignment
+    private boolean isShort;    // type of questions within section
+    private Bquestions ques[];  // array of questions
+    private int marksVisibilty; // *** if showing marks at header
     
 
-    public Bsections(String label, String font, int alignment, int size, int marksVisibilty, int qsize, int qalignment, Bquestions[] ques) {
+    public Bsections(String label, String font, boolean isShort, int alignment, int size, int marksVisibilty, int qsize, int qalignment, Bquestions[] ques) {
         this.label = label;
         this.font = font;
         this.alignment = alignment;
         this.size = size;
+        this.isShort = isShort;
         this.marksVisibilty = marksVisibilty;
         this.qsize = qsize;
         this.qalignment = qalignment;
@@ -24,6 +27,14 @@ public class Bsections {
     }
 
     public Bsections() {
+    }
+
+    public boolean isIsShort() {
+        return isShort;
+    }
+
+    public void setIsShort(boolean isShort) {
+        this.isShort = isShort;
     }
 
     public String getLabel() {

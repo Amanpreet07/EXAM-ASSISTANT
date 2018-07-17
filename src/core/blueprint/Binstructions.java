@@ -3,10 +3,10 @@ package core.blueprint;
 
 public class Binstructions {
 
-    private String value;
-    private int alignment;
-    private int size;
-    private String font;
+    private String value;  // instruction itself
+    private int alignment; // left - centre - right
+    private int size;      // font size
+    private String font;   // font type including style(bold or italics)
 
     public Binstructions() {
     }

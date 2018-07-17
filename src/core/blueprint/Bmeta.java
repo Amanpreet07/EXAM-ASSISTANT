@@ -3,14 +3,14 @@ package core.blueprint;
 
 public class Bmeta {
 
-    private String value;
-    private String alias;
-    private boolean isHeader;
-    private boolean isChunk;
-    private int chunkNumber;
-    private int alignment;
-    private String font;
-    private int size;
+    private String value;      // value
+    private String alias;      // alias - attribute
+    private boolean isHeader;  // if its a header
+    private boolean isChunk;   // if its a chunk
+    private int chunkNumber;   // chunk number if exists
+    private int alignment;     // left - centre - right
+    private String font;       // font type and style
+    private int size;          // font size
 
     public Bmeta(String value, String alias, boolean isHeader, boolean group,
             int groupNumber, int alignment, String font, int size) {

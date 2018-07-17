@@ -8,13 +8,13 @@ public class Admin implements Serializable{
     private String name;
     private String gender;
     private int age;
-    private String doc;
+    private String doc; // data of creation
     private String institution;
     private String i_id; // for admins id.
-    private String position;
+    private String position; 
     private String itype; // instituition type : school, college, univ, training, other
-    private String avatar;
-    private String contact;
+    private String avatar; // path to an image
+    private String contact; 
     private String email;
     private String twitter; // optional field
     private String linkedIn; // optional field

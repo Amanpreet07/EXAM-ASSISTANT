@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class Guest implements Serializable{
     
     private String name;
-    private String i_id;
+    private String i_id; // user's id (host institution)
     private String contact; // optional field
 
     public Guest(String name, String i_id, String contact) {

@@ -74,6 +74,7 @@ public class E_Logger {
         // doesn't check for file existance..
     }
 
+    // reads a singleton class 
     private String determineUser() {
         return Holder.getInstance().getSession();
     }

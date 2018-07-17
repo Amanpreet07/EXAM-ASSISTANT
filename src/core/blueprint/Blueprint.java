@@ -1,7 +1,6 @@
 package core.blueprint;
 // Purpose: To manage the structure of blueprints
 
-import com.itextpdf.text.FontFactory;
 import java.io.Serializable;
 
 public class Blueprint implements Serializable{
@@ -11,8 +10,8 @@ public class Blueprint implements Serializable{
     
     // Exam Properties - metadata
     // One or two of these can be choosen as headers
-    // other can be in order or chunk
-    // ->writeAs ,in header, in group, partner, alignment, size, fonttype 
+    // other can be in order or in chunk
+    // ->writeAs, in header, in group, partner, alignment, size, fonttype 
     // -> Date  
     // -> Subcode 
     // -> SubName 
@@ -42,16 +41,16 @@ public class Blueprint implements Serializable{
     
     // variables ↓↓↓
     
-    private Bmeta bmeta[];
-    private boolean Ins;
-    private boolean insStyleUnique;
-    private String insFont;
-    private int insSize;
-    private int insAlignment;
-    private Binstructions bins[];
-    private int sectionCount;
-    private int sectionQuestionCount[];
-    private Bsections bsec[];
+    private Bmeta bmeta[];         // meta data array
+    private boolean Ins;           // if instructions are required 
+    private boolean insStyleUnique; // if instructions  have unique style
+    private String insFont;        // font if not unique
+    private int insSize;           // size if not unique 
+    private int insAlignment;      // alignment if not unique 
+    private Binstructions bins[];  // instructions array
+    private int sectionCount;      // number of sections 
+    private int sectionQuestionCount[]; // array of count of questions in sections
+    private Bsections bsec[];      // section array 
 
     public Blueprint(Bmeta[] bmeta, boolean Ins, boolean insStyleUnique, String insFont, int insSize, int insAlignment, Binstructions[] bins, int sectionCount, int[] sectionQuestionCount, Bsections[] bsec) {
         this.bmeta = bmeta;
